@@ -12,9 +12,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
-        <div class="container text-center border border-black mt-5 d-grid gap-3">
+        <div class="container text-center border border-black mt-5 mb-5 d-grid gap-3 rounded">
             <div class="row">
-                <div class="col bg-secondary">
+                <div class="col head-footer">
                     <h1>Payment form example</h1>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <form>
+            <form class="m-0">
                 <!-- Datos de la tarjeta -->
                 <div class="row text-start mb-3">                
                     <div class="col-5">
@@ -65,15 +65,45 @@
                         <label for="state" class="form-label">State</label>
                         <select id="disabledSelect" class="form-select">
                           <option>Bogotá</option>
-                          <option>Bogotá</option>
-                          <option>Bogotá</option>
-                          <option>Bogotá</option>
+                          <option>Villavicencio</option>
+                          <option>Bucaramanga</option>
+                          <option>Manizales</option>
                         </select>
                     </div>                
                     <div class="col-3">                        
                         <label for="postal-code" class="form-label">Postal Code</label>
                         <input type="number" class="form-control">
                     </div>    
+                </div>
+                <!-- Medio de pago, fecha y mensaje -->         
+                <div class="row text-start mb-3">                
+                    <div class="col-3">
+                        <label for="city" class="form-label">We accept:</label><br>
+                        <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                            <label class="btn btn-outline-secondary" for="vbtn-radio1"><i class="fa-solid fa-credit-card"></i></label>
+                            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                            <label class="btn btn-outline-secondary" for="vbtn-radio2"><i class="fa-solid fa-address-card"></i></label>
+                            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+                            <label class="btn btn-outline-secondary" for="vbtn-radio3"><i class="fa-solid fa-id-card"></i></label>
+                        </div>
+                    </div>                                   
+                    <div class="col-3">                        
+                        <label for="date" class="form-label">Date</label>
+                        <input type="date" class="form-control">
+                    </div>                 
+                    <div class="col-6">                        
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control textarea"></textarea>
+                        <div class="form-text" id="basic-addon4">Add any notes here.</div>
+                    </div>    
+                </div>
+                <!-- Botones  -->                
+                <div class="row text-start head-footer py-3">            
+                    <div class="col-md-6 offset-md-10 ">
+                        <button type="button" class="btn btn-secondary">Cancel</button>
+                        <button type="button" class="btn btn-primary">Send</button>
+                    </div>
                 </div>
 
             </form>

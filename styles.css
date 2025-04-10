@@ -9,3 +9,11 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.textarea {
+  height: 100px;
+}
+
+.head-footer {
+  background-color: rgb(236, 236, 236);
+}
